@@ -4,7 +4,7 @@
   "description": "Missing grep tool for node",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/Oldenborg/node-grep/issues"
   },
-  "homepage": "https://github.com/Oldenborg/node-grep#readme"
+  "homepage": "https://github.com/Oldenborg/node-grep#readme",
+  "devDependencies": {
+    "jest": "^24.9.0"
+  }
 }
