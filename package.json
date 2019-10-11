@@ -23,5 +23,8 @@
   "homepage": "https://github.com/Oldenborg/node-grep#readme",
   "devDependencies": {
     "jest": "^24.9.0"
+  },
+  "dependencies": {
+    "mock-fs": "^4.10.1"
   }
 }
