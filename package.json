@@ -1,6 +1,10 @@
 {
   "name": "node-grep-tool",
   "version": "0.0.2",
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
   "description": "Missing grep tool for node",
   "main": "index.js",
   "scripts": {
