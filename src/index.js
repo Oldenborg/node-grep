@@ -1,7 +1,13 @@
-module.exports = (term, directory) => {
+const fs = require('fs');
+
+module.exports = (term, dir) => {
 
   if(!term) {
     throw "A search term is required";
+  }
+
+  if(!dir) {
+    dir = '.';
   }
 
   if(typeof term !== "string") {
@@ -9,7 +15,8 @@ module.exports = (term, directory) => {
   }
 
   return {
-    term: term,
+    dir,
+    term,
     count: 0
   }
 }

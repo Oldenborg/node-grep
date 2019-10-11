@@ -29,5 +29,9 @@ describe('node-grep', () => {
       expect(grep('can be altered').term).toBe('can be altered');
       expect(grep('so we are sure its the input').term).toBe('so we are sure its the input');
     });
+
+    it('returns the dir to be searched which defaults to "."', () => {
+      expect(grep('example').dir).toBe('.');
+    });
   });
 });
