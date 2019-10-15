@@ -7,12 +7,14 @@ module.exports = (term, dir) => {
   }
 
   if(!dir) {
-    dir = '.';
+    dir = process.cwd();
   }
 
   if(typeof term !== "string") {
     throw "Search term must be a string";
   }
+
+  dir = path.resolve(dir);
 
   return {
     dir,

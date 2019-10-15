@@ -16,7 +16,7 @@ describe('node-grep', () => {
   });
 
   describe('returned values', () => {
-    it('returns an object of result data', () => {
+    it('returns an object', () => {
       expect(typeof grep('example')).toBe("object");
     });
 
@@ -30,8 +30,10 @@ describe('node-grep', () => {
       expect(grep('so we are sure its the input').term).toBe('so we are sure its the input');
     });
 
-    it('returns the dir to be searched which defaults to "."', () => {
-      expect(grep('example').dir).toBe('.');
+    it('returns the dir to be searched which defaults to the current working directory', () => {
+      expect(grep('example').dir).toBe(process.cwd());
+      expect(grep('example','/src/path/to/grep/in').dir).toBe('/src/path/to/grep/in');
+      expect(grep('example','///src/path////to///grep/in').dir).toBe('/src/path/to/grep/in');
     });
   });
 });
